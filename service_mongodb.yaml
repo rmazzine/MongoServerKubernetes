@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mongodb-service
+spec:
+  selector:
+    app: mongo-db
+  ports:
+    - port: 27017
