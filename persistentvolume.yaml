@@ -2,13 +2,14 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: mo-data-pv
-  labels:
-    type: local
 spec:
-  storageClassName: generic
+  accessModes:
+  - ReadWriteOnce
   capacity:
     storage: 1000Mi
-  accessModes:
-    - ReadWriteOnce
   hostPath:
-    path: "/var/lib/mongo"
+    path: /data/standard/default/mo-data-pv
+    type: ""
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
+  volumeMode: Filesystem

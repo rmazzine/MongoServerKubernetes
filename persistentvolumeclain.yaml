@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mo-data-pvc
 spec:
-  storageClassName: generic
+  storageClassName: standard
   accessModes:
   - ReadWriteOnce
   resources:
